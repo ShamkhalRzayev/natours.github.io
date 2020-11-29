@@ -1,0 +1,53 @@
+
+.header {
+    height: 95vh;
+    background-position: top;
+    background-size: cover;
+    background-image: linear-gradient(to right, #7ed56fb0, #28b485b0), url("../img/hero.jpg");
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    position: relative;
+
+    .logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+
+        .logo {
+            width: 8rem;
+        }
+
+    }
+
+    .text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    
+        .primary-text {
+            display: block;
+            color: white;
+            font-size: 6rem;
+            font-weight: 400;
+            letter-spacing: 2.55rem;
+            text-transform: uppercase;
+            animation-name: moveFromLeft;
+            animation-duration: 1s;
+            animation-timing-function: ease-in;
+        }
+
+        .secondary-text {
+            display: block;
+            color: white;
+            font-size: 2rem;
+            font-weight: 400;
+            letter-spacing: 1.4rem;
+            text-transform: uppercase;
+            animation: moveFromRight 1s ease-in;
+        }
+        
+    
+    }
+    
+}
