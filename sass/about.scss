@@ -1,0 +1,131 @@
+.about {
+    background-color: $color-gray;
+    margin-top: -20vh;
+    height: 150vh;
+
+    .heading-container {
+        padding-top: 22vh;
+        text-align: center;
+
+
+        h2 {
+            background-image: linear-gradient(to right, $color-green-light, $color-green-dark);
+            -webkit-background-clip: text;
+            color: transparent;
+            font-size: 3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: transform 0.2s;
+
+            &:hover {                
+                transform: skewX(15deg) skewY(2deg) scale(1.1);
+            }
+        }
+
+    }
+
+    .container {
+
+        max-width: 110rem;
+        height: 35rem;
+        margin: 3rem auto;
+        display: flex;
+        flex-wrap: wrap;
+
+        .left {
+            width: 55rem;
+            height: 35rem;
+            margin-left: 2rem;
+            
+            
+            h3 {
+                margin-bottom: 1rem;
+                color: black;
+            }
+
+            p {
+               color: black; 
+            }
+
+            .second {
+                margin-bottom: 1rem;
+            }
+
+            a {
+                color: $color-green-light; 
+                padding: 1rem 0.5rem;
+                border-bottom: 1px solid $color-green-light;
+                text-decoration: none;
+                text-align: center;
+                transition: all 0.2s;
+
+                &:hover {
+                    background-color: $color-green-light;
+                    color: white;
+                    transform: translateY(-4px);
+                    box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: 0.5);
+                }
+
+                &:active {
+                    transform: translateY(-1px);
+                    box-shadow: 0 0.5rem 1rem rgba($color: #000000, $alpha: 1.0);
+                }
+
+            }
+
+    
+        }
+
+        .right {
+            width: 45rem;
+            height: 35rem;
+            position: relative;
+            margin-left: 4rem;
+
+            .img {
+                width: 55%;
+                box-shadow: 0 1.5rem 1rem rgba($color: #000000, $alpha: 0.4);
+                border-radius: 2px;
+
+                &:hover {
+                    transform: scale(1.1);
+                    outline: 1rem solid rgba($color-green, $alpha: 1);
+                    outline-offset: 1rem;
+                    box-shadow: 0 2.5rem 1rem rgba($color: #000000, $alpha: 0.6);
+                }
+
+            }
+
+            &:hover img:not(:hover) {
+                transform: scale(0.95);
+            }
+
+            .one {
+                position: absolute;
+                top: -2px;
+            }
+
+            .two {
+                position: absolute;
+                top: 5rem;
+                left: 22rem;
+            }
+
+            .three {
+                position: absolute;
+                top: 13rem;
+                left: 11rem;
+            }
+
+        }
+
+    }
+
+} 
+
+ 
+
+
+
+
