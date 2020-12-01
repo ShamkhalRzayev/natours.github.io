@@ -6,6 +6,7 @@
     background-image: linear-gradient(to right, #7ed56fb0, #28b485b0), url("../img/hero.jpg");
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     position: relative;
+    background-color: $color-gray;
 
     .logo-box {
         position: absolute;

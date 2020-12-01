@@ -51,7 +51,8 @@ body {
   background-size: cover;
   background-image: linear-gradient(to right, #7ed56fb0, #28b485b0), url("../img/hero.jpg");
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  position: relative; }
+  position: relative;
+  background-color: #eee; }
   .header .logo-box {
     position: absolute;
     top: 4rem;
@@ -85,8 +86,8 @@ body {
 
 .about {
   background-color: #eee;
-  margin-top: -20vh;
-  height: 150vh; }
+  margin-top: -150px;
+  height: 800px; }
   .about .heading-container {
     padding-top: 22vh;
     text-align: center; }
@@ -104,7 +105,7 @@ body {
   .about .container {
     max-width: 110rem;
     height: 35rem;
-    margin: 3rem auto;
+    margin: 3rem auto 0 auto;
     display: flex;
     flex-wrap: wrap; }
     .about .container .left {
@@ -204,3 +205,41 @@ body {
 .btn:hover::after {
   transform: scaleX(1.6) scaleY(1.4);
   opacity: 0; }
+
+.features {
+  background-image: linear-gradient(to right, rgba(85, 197, 122, 0.5), rgba(40, 180, 133, 0.6)), url("../img/nat-4.jpg");
+  background-size: cover;
+  height: 90vh;
+  transform: skewY(-7deg);
+  margin-top: -10rem; }
+  .features > * {
+    transform: skewY(7deg); }
+  .features .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 32rem;
+    margin: auto;
+    padding-top: 15rem; }
+    .features .row .feature-box {
+      color: black;
+      background-color: #eee;
+      width: 28rem;
+      height: 32rem;
+      text-align: center;
+      box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.712);
+      transition: transform 0.3s;
+      border-radius: 3px; }
+      .features .row .feature-box:hover {
+        transform: translateY(-1.5rem) scale(1.05);
+        box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.788); }
+      .features .row .feature-box i {
+        font-size: 7rem;
+        background-image: linear-gradient(to right, #55c57a, #28b485);
+        color: transparent;
+        -webkit-background-clip: text;
+        padding: 2rem; }
+      .features .row .feature-box h3 {
+        padding: 1rem; }
+      .features .row .feature-box p {
+        padding: 1rem; }

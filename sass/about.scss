@@ -1,7 +1,8 @@
 .about {
     background-color: $color-gray;
-    margin-top: -20vh;
-    height: 150vh;
+    margin-top: -150px;
+    height: 800px; 
+
 
     .heading-container {
         padding-top: 22vh;
@@ -29,7 +30,7 @@
 
         max-width: 110rem;
         height: 35rem;
-        margin: 3rem auto;
+        margin: 3rem auto 0 auto;
         display: flex;
         flex-wrap: wrap;
 
