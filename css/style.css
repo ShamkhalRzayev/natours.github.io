@@ -1,5 +1,4 @@
-/*
-COLORS:*/
+/*COLORS:*/
 @keyframes moveFromLeft {
   0% {
     opacity: 0;
@@ -94,6 +93,7 @@ body {
     .about .heading-container h2 {
       background-image: linear-gradient(to right, #55c57a, #28b485);
       -webkit-background-clip: text;
+      background-clip: text;
       color: transparent;
       font-size: 3rem;
       font-weight: 700;
@@ -185,6 +185,12 @@ body {
   position: relative;
   font-size: 1.6rem; }
 
+.btn-green {
+  background-color: #28b485;
+  color: white;
+  position: relative;
+  font-size: 1.6rem; }
+
 .btn-animated {
   animation: moveFromBottom 0.5s ease-in 0.75s;
   animation-fill-mode: backwards; }
@@ -205,6 +211,108 @@ body {
 .btn:hover::after {
   transform: scaleX(1.6) scaleY(1.4);
   opacity: 0; }
+
+.tours {
+  padding-top: 18rem;
+  padding-bottom: 10rem;
+  background-color: #eee;
+  text-align: center;
+  margin-top: -10rem; }
+  .tours h2 {
+    background-image: linear-gradient(to right, #55c57a, #28b485);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: transform 0.2s;
+    display: inline-block;
+    margin-bottom: 4rem; }
+    .tours h2:hover {
+      transform: skewX(15deg) skewY(2deg) scale(1.1); }
+  .tours .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 5rem; }
+  .tours .card-box {
+    height: 48rem;
+    width: 32rem;
+    perspective: 150rem; }
+  .tours .card-box:hover .front {
+    transform: rotateY(-180deg); }
+  .tours .card-box:hover .back {
+    transform: rotateY(0deg); }
+  .tours .card {
+    height: 48rem;
+    width: 32rem;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    transition: transform 0.8s;
+    box-shadow: 0 1.5rem 1rem rgba(0, 0, 0, 0.747); }
+  .tours .back {
+    transform: rotateY(180deg); }
+  .tours .front {
+    background-color: white; }
+    .tours .front .img {
+      height: 23rem;
+      background-size: cover;
+      background-blend-mode: screen;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      position: relative;
+      text-align: right; }
+    .tours .front h4 span {
+      position: absolute;
+      top: 18rem;
+      right: 2rem;
+      font-size: 2rem;
+      font-weight: 400;
+      color: white;
+      background-image: linear-gradient(to right, #ffb900, #ff7730);
+      text-transform: uppercase;
+      padding: 0.5rem; }
+    .tours .front h4 .sea {
+      position: absolute;
+      top: 14rem;
+      right: 2rem; }
+    .tours .front .list ul {
+      list-style: none; }
+      .tours .front .list ul li {
+        border-bottom: 1px solid #eee;
+        width: 80%;
+        margin: 0 auto;
+        padding: 1rem; }
+      .tours .front .list ul .last {
+        border: none; }
+  .tours .card-1-front .img {
+    background-image: linear-gradient(to right, #ffb900, #ff7730), url("../img/nat-5.jpg"); }
+  .tours .card-2-front .img {
+    background-image: linear-gradient(to right, #55c57a, #28b485), url("../img/nat-6.jpg"); }
+  .tours .card-3-front .img {
+    background-image: linear-gradient(to right, #2998ff, #5643fa), url("../img/nat-7.jpg"); }
+  .tours .card-2-front h4 span {
+    background-image: linear-gradient(to right, #55c57a, #28b485); }
+  .tours .card-3-front h4 span {
+    background-image: linear-gradient(to right, #2998ff, #5643fa); }
+  .tours .card-1-back {
+    background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+  .tours .card-2-back {
+    background-image: linear-gradient(to right bottom, #55c57a, #28b485); }
+  .tours .card-3-back {
+    background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
+  .tours .card-price-box {
+    text-align: center;
+    color: white;
+    margin: 5rem auto; }
+    .tours .card-price-box .card-price {
+      font-size: 5rem; }
+    .tours .card-price-box .card-only {
+      text-transform: uppercase; }
 
 .features {
   background-image: linear-gradient(to right, rgba(85, 197, 122, 0.5), rgba(40, 180, 133, 0.6)), url("../img/nat-4.jpg");
@@ -243,3 +351,99 @@ body {
         padding: 1rem; }
       .features .row .feature-box p {
         padding: 1rem; }
+
+.stories {
+  padding: 8rem 0;
+  position: relative; }
+  .stories .video-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; }
+    .stories .video-container .background-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.20; }
+  .stories .heading-box {
+    text-align: center; }
+  .stories h2 {
+    background-image: linear-gradient(to right, #55c57a, #28b485);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: transform 0.2s;
+    display: inline-block;
+    margin-bottom: 4rem;
+    text-align: center; }
+    .stories h2:hover {
+      transform: skewX(15deg) skewY(2deg) scale(1.1); }
+  .stories .row {
+    margin: 0 auto; }
+    .stories .row .story {
+      margin: 0 auto;
+      background-color: rgba(255, 255, 255, 0.671);
+      padding: 4rem 5rem;
+      width: 65%;
+      transform: skewX(-15deg);
+      backface-visibility: hidden;
+      margin-bottom: 8rem; }
+      .stories .row .story > * {
+        transform: skewX(15deg); }
+      .stories .row .story:hover .caption {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+        backface-visibility: hidden; }
+      .stories .row .story:hover img {
+        transform: translateX(-4rem) scale(1);
+        filter: blur(3px);
+        backface-visibility: hidden; }
+    .stories .row .figure {
+      width: 16rem;
+      height: 16rem;
+      clip-path: circle(50%);
+      float: left;
+      shape-outside: circle(50%);
+      position: relative; }
+      .stories .row .figure img {
+        height: 100%;
+        transform: translateX(-4rem) scale(1.4);
+        transition: all 0.5s; }
+      .stories .row .figure .caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 20%);
+        color: white;
+        font-size: 1.7rem;
+        font-weight: 400;
+        text-align: center;
+        opacity: 0;
+        transition: all 0.5s; }
+    .stories .row .story-text {
+      height: 16rem;
+      transform: translateX(3rem); }
+  .stories .link-container {
+    text-align: center; }
+  .stories a {
+    color: #55c57a;
+    padding: 1rem 0.5rem;
+    border-bottom: 1px solid #55c57a;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.2s;
+    border-radius: 3px; }
+    .stories a:hover {
+      background-color: #55c57a;
+      color: white;
+      transform: translateY(-4px);
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5); }
+    .stories a:active {
+      transform: translateY(-1px);
+      box-shadow: 0 0.5rem 1rem black; }

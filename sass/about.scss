@@ -12,6 +12,7 @@
         h2 {
             background-image: linear-gradient(to right, $color-green-light, $color-green-dark);
             -webkit-background-clip: text;
+            background-clip: text;
             color: transparent;
             font-size: 3rem;
             font-weight: 700;

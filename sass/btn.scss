@@ -24,12 +24,15 @@
     background-color: white;
     color: gray;
     position: relative;
-    font-size: 1.6rem;
-    
+    font-size: 1.6rem;   
 }
 
-
-
+.btn-green {
+    background-color: $color-green-dark;
+    color:white;
+    position: relative;
+    font-size: 1.6rem;   
+}
 
 .btn-animated {
     animation: moveFromBottom 0.5s ease-in 0.75s;

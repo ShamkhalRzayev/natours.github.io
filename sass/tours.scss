@@ -1,0 +1,166 @@
+.tours {
+    padding-top: 18rem;
+    padding-bottom: 10rem;
+    background-color: $color-gray;
+    text-align: center;
+    margin-top: -10rem;
+
+    h2 {
+        background-image: linear-gradient(to right, $color-green-light, $color-green-dark);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        font-size: 3rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: transform 0.2s;
+        display: inline-block;
+        margin-bottom: 4rem;
+
+        &:hover {                
+            transform: skewX(15deg) skewY(2deg) scale(1.1);
+        }
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-bottom: 5rem;
+    }
+
+    .card-box {
+        height: 48rem;
+        width: 32rem;
+        perspective: 150rem;
+    }
+
+    .card-box:hover .front {
+        transform: rotateY(-180deg);
+    }
+
+    .card-box:hover .back {
+        transform: rotateY(0deg);
+
+    }
+
+    .card {
+        height: 48rem;
+        width: 32rem;
+        backface-visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 5px;
+        transition: transform 0.8s;
+        box-shadow: 0 1.5rem 1rem rgba(0, 0, 0, 0.747);
+
+    }
+
+    .back {
+        transform: rotateY(180deg);
+    }
+
+    .front {
+        background-color: white;
+
+        .img {
+            height: 23rem;
+            background-size: cover;
+            background-blend-mode: screen;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            position: relative;
+            text-align: right;
+        }
+
+
+        h4 span { 
+            position: absolute;
+            top: 18rem;
+            right: 2rem;
+            font-size: 2rem;
+            font-weight: 400;
+            color: white;
+            background-image: linear-gradient(to right, $color-orange-light, $color-orange-dark);
+            text-transform: uppercase;
+            padding: 0.5rem;
+        }
+
+        h4 .sea {
+            position: absolute;
+            top: 14rem;
+            right: 2rem;
+    
+        }  
+
+        .list ul {
+            list-style: none;
+
+            li {
+                border-bottom: 1px solid $color-gray;
+                width: 80%;
+                margin: 0 auto;
+                padding: 1rem;
+            }
+
+            .last {
+                border: none;
+            }
+        }
+
+    }
+
+
+        .card-1-front .img {
+        background-image: linear-gradient(to right, $color-orange-light, $color-orange-dark), 
+                          url("../img/nat-5.jpg");
+        }
+
+        .card-2-front .img {
+        background-image: linear-gradient(to right, $color-green-light, $color-green-dark), 
+                          url("../img/nat-6.jpg");
+        }                  
+        .card-3-front .img {
+        background-image: linear-gradient(to right, $color-blue-light, $color-blue-dark), 
+                          url("../img/nat-7.jpg");
+        }
+
+
+        .card-2-front h4 span { 
+            background-image: linear-gradient(to right, $color-green-light, $color-green-dark);
+        }
+
+        .card-3-front h4 span { 
+            background-image: linear-gradient(to right, $color-blue-light, $color-blue-dark);
+        }
+
+
+
+    .card-1-back {
+        background-image: linear-gradient(to right bottom, $color-orange-light, $color-orange-dark);
+    }
+
+    .card-2-back {
+        background-image: linear-gradient(to right bottom, $color-green-light, $color-green-dark);
+    }
+
+    .card-3-back {
+        background-image: linear-gradient(to right bottom, $color-blue-light, $color-blue-dark);
+    }
+
+    .card-price-box {
+        text-align: center;
+        color: white;
+        margin: 5rem auto;
+
+        .card-price {
+            font-size: 5rem;
+        }
+
+        .card-only {
+            text-transform: uppercase;
+        }
+    }
+
+}
