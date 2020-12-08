@@ -163,7 +163,8 @@ body {
         left: 11rem; }
 
 .btn:link,
-.btn:visited {
+.btn:visited,
+.btn {
   padding: 1.5rem 4rem;
   border-radius: 5rem;
   text-decoration: none;
@@ -175,7 +176,9 @@ body {
   box-shadow: 0 10px 10px black;
   transform: translateY(-3px); }
 
-.btn:active {
+.btn:active,
+.btn:focus,
+.btn:checked {
   box-shadow: 0 5px 5px black;
   transform: translateY(-1px); }
 
@@ -189,7 +192,21 @@ body {
   background-color: #28b485;
   color: white;
   position: relative;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  border: none; }
+
+.btn-green::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #28b485;
+  z-index: -1;
+  border-radius: 50px;
+  transition: all 1s; }
 
 .btn-animated {
   animation: moveFromBottom 0.5s ease-in 0.75s;
@@ -447,3 +464,87 @@ body {
     .stories a:active {
       transform: translateY(-1px);
       box-shadow: 0 0.5rem 1rem black; }
+
+.booking {
+  padding: 15rem 0;
+  background-image: linear-gradient(to right, #55c57a, #28b485); }
+  .booking h2 {
+    background-image: linear-gradient(to right, #55c57a, #28b485);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: transform 0.2s;
+    display: inline-block;
+    margin-bottom: 4rem;
+    text-align: center; }
+    .booking h2:hover {
+      transform: skewX(15deg) skewY(2deg) scale(1.1); }
+  .booking .form-container {
+    background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.85) 50%, transparent 50%), url(../img/nat-10.jpg);
+    height: 50rem;
+    width: 70%;
+    background-size: cover;
+    margin: 0 auto;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.356);
+    padding: 4rem; }
+    .booking .form-container form {
+      width: 50%; }
+  .booking .input-container {
+    margin-bottom: 2rem; }
+    .booking .input-container input {
+      display: block;
+      width: 90%;
+      padding: 1.5rem 2rem;
+      font-size: 1.5rem;
+      font-family: inherit;
+      border: none;
+      border-bottom: 3px solid transparent; }
+      .booking .input-container input:focus {
+        border: none;
+        border-bottom: 3px solid #28b485;
+        outline-style: none; }
+        .booking .input-container input:focus:invalid {
+          border-bottom: 3px solid #ff7730; }
+      .booking .input-container input:placeholder-shown + label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem); }
+    .booking .input-container label {
+      font-size: 1.5rem;
+      margin-left: 2rem;
+      padding-top: 1rem;
+      display: block;
+      transition: all 0.4s; }
+  .booking .radio-container {
+    display: inline-block;
+    width: 47%; }
+    .booking .radio-container input {
+      display: none; }
+    .booking .radio-container input:checked ~ span::after {
+      opacity: 1; }
+    .booking .radio-container label {
+      padding-left: 2rem; }
+    .booking .radio-container span {
+      height: 3rem;
+      width: 3rem;
+      border-radius: 50%;
+      border: 4px solid #28b485;
+      display: inline-block;
+      color: transparent;
+      position: relative; }
+      .booking .radio-container span::after {
+        content: "";
+        width: 1rem;
+        height: 1rem;
+        display: inline-block;
+        border-radius: 50%;
+        background-color: #28b485;
+        position: absolute;
+        top: 27%;
+        left: 27%;
+        opacity: 0; }
