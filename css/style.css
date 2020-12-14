@@ -177,8 +177,7 @@ body {
   transform: translateY(-3px); }
 
 .btn:active,
-.btn:focus,
-.btn:checked {
+.btn:focus {
   box-shadow: 0 5px 5px black;
   transform: translateY(-1px); }
 
@@ -193,7 +192,8 @@ body {
   color: white;
   position: relative;
   font-size: 1.6rem;
-  border: none; }
+  border: none;
+  outline-style: none; }
 
 .btn-green::after {
   content: "";
@@ -503,7 +503,8 @@ body {
       font-size: 1.5rem;
       font-family: inherit;
       border: none;
-      border-bottom: 3px solid transparent; }
+      border-bottom: 3px solid transparent;
+      transition: all 1s; }
       .booking .input-container input:focus {
         border: none;
         border-bottom: 3px solid #28b485;
@@ -548,3 +549,152 @@ body {
         top: 27%;
         left: 27%;
         opacity: 0; }
+
+.footer {
+  padding: 10rem 0;
+  background-color: #3b3535; }
+  .footer .logo-box {
+    text-align: center;
+    margin-bottom: 8rem; }
+    .footer .logo-box img {
+      width: 15rem; }
+  .footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+  .footer .navigation {
+    width: 35%;
+    margin-left: 5rem;
+    border-top: 1px solid #eee; }
+    .footer .navigation ul {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: space-between;
+      padding-top: 1rem; }
+    .footer .navigation li {
+      list-style: none;
+      text-align: center;
+      transition: all 0.3s; }
+      .footer .navigation li:hover {
+        transform: rotate(5deg) scale(1.5); }
+      .footer .navigation li:hover a {
+        color: #55c57a;
+        background-color: #3b3535;
+        border: 1px solid #333232; }
+    .footer .navigation a {
+      text-decoration: none;
+      color: #eee; }
+  .footer .copyright {
+    width: 40%;
+    margin-right: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+    display: inline-block;
+    text-align: justify; }
+
+.section-navigation .checkbox {
+  display: none; }
+
+.section-navigation .checkbox-label {
+  background-color: white;
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  display: inline-block;
+  position: fixed;
+  top: 6rem;
+  right: 6rem;
+  z-index: 100;
+  text-align: center;
+  cursor: pointer; }
+  .section-navigation .checkbox-label:hover .rule::after {
+    top: 1.4rem; }
+  .section-navigation .checkbox-label:hover .rule::before {
+    top: -1.4rem; }
+  .section-navigation .checkbox-label .rule {
+    position: relative;
+    margin-top: 3.5rem; }
+    .section-navigation .checkbox-label .rule, .section-navigation .checkbox-label .rule::before, .section-navigation .checkbox-label .rule::after {
+      width: 4rem;
+      background-color: black;
+      height: 0.1rem;
+      display: inline-block;
+      transition: all 0.3s; }
+    .section-navigation .checkbox-label .rule::before, .section-navigation .checkbox-label .rule::after {
+      content: " ";
+      margin: 0 auto; }
+    .section-navigation .checkbox-label .rule::before {
+      position: absolute;
+      top: -1rem;
+      left: 0; }
+    .section-navigation .checkbox-label .rule::after {
+      position: absolute;
+      top: 1rem;
+      left: 0; }
+
+.section-navigation .checkbox-background {
+  background-image: radial-gradient(#55c57a, #28b485);
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 6.5rem;
+  right: 6.5rem;
+  z-index: 50;
+  transition: transform 0.7s; }
+
+.section-navigation .nav {
+  display: none;
+  height: 100vh;
+  width: 100%;
+  z-index: 75;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all 0.7s ease-in-out; }
+  .section-navigation .nav ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+    .section-navigation .nav ul li {
+      display: block;
+      list-style: none; }
+    .section-navigation .nav ul a:link, .section-navigation .nav ul a:visited {
+      display: inline-block;
+      text-decoration: none;
+      font-size: 2rem;
+      color: white;
+      font-family: inherit;
+      text-transform: uppercase;
+      padding: 1rem 2rem;
+      margin: 0.5rem;
+      transition: all 0.5s;
+      background-image: linear-gradient(120deg, transparent 0%, transparent 50%, white 50%);
+      background-size: 230%;
+      border-radius: 3px; }
+    .section-navigation .nav ul a:active, .section-navigation .nav ul a:hover {
+      color: #7ed56f;
+      background-position: 100%;
+      transform: translateX(1rem); }
+    .section-navigation .nav ul span {
+      margin-right: 1.5rem; }
+
+.section-navigation .checkbox:checked ~ .checkbox-background {
+  transform: scale(100); }
+
+.section-navigation .checkbox:checked ~ .nav {
+  display: block; }
+
+.section-navigation .checkbox:checked + .checkbox-label .rule {
+  background-color: transparent; }
+
+.section-navigation .checkbox:checked ~ .checkbox-label .rule::before {
+  top: 0;
+  transform: rotate(135deg); }
+
+.section-navigation .checkbox:checked ~ .checkbox-label .rule::after {
+  top: 0;
+  transform: rotate(-135deg); }
