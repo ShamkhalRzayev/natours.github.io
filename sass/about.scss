@@ -1,12 +1,17 @@
 .about {
     background-color: $color-gray;
     margin-top: -150px;
-    height: 800px; 
+    padding-top: 150px;
+    padding-bottom: 20rem;
+
+    @media (max-width: 800px) {
+         padding-bottom: 45rem;
+    }
 
 
     .heading-container {
-        padding-top: 22vh;
         text-align: center;
+
 
 
         h2 {
@@ -19,6 +24,8 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             transition: transform 0.2s;
+            margin-left: 10rem;
+            margin-right: 10rem;
 
             &:hover {                
                 transform: skewX(15deg) skewY(2deg) scale(1.1);
@@ -37,8 +44,13 @@
 
         .left {
             width: 55rem;
-            height: 35rem;
             margin-left: 2rem;
+
+            @media (max-width: 800px) {
+                width: 80%;
+                height: fit-content;
+                margin: 1rem auto;
+            }
             
             
             h3 {
@@ -81,14 +93,23 @@
 
         .right {
             width: 45rem;
-            height: 35rem;
             position: relative;
             margin-left: 4rem;
+
+            @media (max-width: 800px) {
+                width: 80%;
+                height: fit-content;
+                margin: 2rem auto;
+            }
 
             .img {
                 width: 55%;
                 box-shadow: 0 1.5rem 1rem rgba($color: #000000, $alpha: 0.4);
                 border-radius: 2px;
+
+                @media (max-width:800px) {
+                    width: 33%;
+                }
 
                 &:hover {
                     transform: scale(1.1);
@@ -106,18 +127,36 @@
             .one {
                 position: absolute;
                 top: -2px;
+
+                @media (max-width:800px) {
+                    top: 0;
+                }
+
             }
 
             .two {
                 position: absolute;
                 top: 5rem;
                 left: 22rem;
+
+                @media (max-width:800px) {
+                    top: -1rem;
+                    left: 33%;
+                    transform: scale(1.1);
+                    z-index: 3;
+                }
             }
 
             .three {
                 position: absolute;
                 top: 13rem;
                 left: 11rem;
+
+                @media (max-width:800px) {
+                    top: 1rem;
+                    left: 63%;
+                    transform: scale(0.9);
+                }
             }
 
         }

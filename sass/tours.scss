@@ -34,6 +34,14 @@
         height: 48rem;
         width: 32rem;
         perspective: 150rem;
+
+        @media (max-width: 800px) {
+            width: 80%;   
+            margin: 2rem auto;   
+            box-shadow: 0 1.5rem 1rem rgba(0, 0, 0, 0.747);
+            margin-bottom: 30rem;
+
+        }
     }
 
     .card-box:hover .front {
@@ -56,14 +64,34 @@
         transition: transform 0.8s;
         box-shadow: 0 1.5rem 1rem rgba(0, 0, 0, 0.747);
 
+        @media (max-width: 800px) {
+            width: 100%; 
+            margin: 2rem auto; 
+            box-shadow: none;       
+        }
+
     }
 
     .back {
         transform: rotateY(180deg);
+
+        @media (max-width: 800px) {
+            transform: rotateY(0);  
+            top: 48rem;    
+            height: auto; 
+        }
+        
+        a {
+            
+            @media (max-width: 800px) {
+                margin-bottom: 3rem;      
+            }
+        }
     }
 
     .front {
         background-color: white;
+
 
         .img {
             height: 23rem;
@@ -153,6 +181,10 @@
         text-align: center;
         color: white;
         margin: 5rem auto;
+
+        @media (max-width: 800px) {
+            margin: 5rem auto 0 auto;        
+        }
 
         .card-price {
             font-size: 5rem;

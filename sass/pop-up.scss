@@ -32,9 +32,17 @@
     transform: translate(-50%, -50%) scale(0.3);
     transition: all 0.3s 0.2s;
 
+    @media (max-width: 1000px) {
+        width: 95%;      
+    }
+
     .left {
 
         width: 33%;
+
+        @media (max-width: 1000px) {
+            display: none;        
+        }
     
         img {
             width: 100%;
@@ -49,6 +57,10 @@
         width: 67%;
         background-color: white;
         padding: 3rem 4rem;
+
+        @media (max-width: 1000px) {
+            width: 100%;        
+        }
         
 
         h2 {
@@ -83,6 +95,10 @@
             column-rule: 1px solid black;
             hyphens: auto;
             text-align: justify;
+
+            @media (max-width: 600px) {
+                column-count: 1;
+            }
     
         }
     

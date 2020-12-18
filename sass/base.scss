@@ -5,7 +5,16 @@
 }
 
 html {
-    font-size: 10px;
+    font-size: 62.5%;
+
+    @media (max-width: 1200px) {
+        font-size: 50%;
+    }
+
+    @media (max-width: 900px) {
+        font-size: 45%;
+    }
+
 }
 
 body {
@@ -16,4 +25,11 @@ body {
     box-sizing: border-box;
     padding: 3rem;
     color: #777;
+
+    @media (max-width: 900px) {
+        padding: 0;
+    }
+
+ 
+
 }

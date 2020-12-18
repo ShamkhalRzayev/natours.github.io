@@ -56,9 +56,21 @@
             backface-visibility: hidden;
             margin-bottom: 8rem;
 
+            @media (max-width:950px) {
+                padding: 2rem 3rem;
+                width: 95%;
+                transform: skewX(0);
+                margin-bottom: 4rem;
+            }
+
 
             & > * {
                 transform: skewX(15deg);
+
+                @media (max-width:950px) {
+                    transform: skewX(0);
+               }
+
             }
 
             &:hover .caption {
@@ -110,6 +122,11 @@
         .story-text {
             height: 16rem;
             transform: translateX(3rem);
+
+            @media (max-width: 950px) {
+                min-height: 16rem;
+                height: auto;
+           }
 
         }
     }

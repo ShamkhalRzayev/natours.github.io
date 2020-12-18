@@ -17,6 +17,11 @@
         text-align: center;
         cursor: pointer;
 
+        @media (max-width: 900px){
+            top: 3rem;
+            right: 4rem;
+        }
+
         &:hover .rule::after {
             top: 1.4rem;
         }
@@ -77,6 +82,11 @@
         z-index: 50;
         transition: transform 0.7s;
 
+        @media (max-width: 900px){
+            top: 3.5rem;
+            right: 4.5rem;
+        }
+
     }
 
     .nav {
@@ -109,7 +119,7 @@
                 &:visited {
                     display: inline-block;
                     text-decoration: none;
-                    font-size: 2rem;
+                    font-size: 3rem;
                     color: white;
                     font-family: inherit;
                     text-transform: uppercase;

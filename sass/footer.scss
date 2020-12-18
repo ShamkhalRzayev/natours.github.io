@@ -6,6 +6,10 @@
         text-align: center;
         margin-bottom: 8rem;
 
+        @media (max-width:900px) {
+            margin-bottom: 3rem;
+        }
+
         img {
             width: 15rem;
         }
@@ -22,6 +26,11 @@
         width: 35%;
         margin-left: 5rem;
         border-top: 1px solid $color-gray;
+
+        @media (max-width:900px) {
+            width: 80%;
+            margin: 1rem auto;
+        }
         
         ul {
             display: flex;
@@ -64,6 +73,11 @@
         border-top: 1px solid $color-gray;
         display: inline-block;
         text-align: justify;
+
+        @media (max-width:900px) {
+            width: 80%;  
+            margin: 2rem auto; 
+        }
 
     }
 
